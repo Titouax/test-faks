@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-500.times do 
+5000.times do 
 	Player.create(
 		name: Faker::Name.name,
 		elo: rand(1...3000),

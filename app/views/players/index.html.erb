@@ -3,8 +3,8 @@
 <div class="px-4 sm:px-6 lg:px-8">
   <div class="sm:flex sm:items-center">
     <div class="sm:flex-auto">
-      <h1 class="text-base font-semibold leading-6 text-gray-900">Top 5 Players</h1>
-      <p class="mt-2 text-sm text-gray-700">A list of the top 5 chess players including their name, elo and age.</p>
+      <h1 class="text-base font-semibold leading-6 text-gray-900">Champions</h1>
+      <p class="mt-2 text-sm text-gray-700">A list of the champions players including their name, elo and age.</p>
     </div>
   </div>
   <div class="mt-8 flow-root">
@@ -23,7 +23,7 @@
             </tr>
           </thead>
           <tbody class="bg-white">
-            <% @top_5.each do |player| %>
+            <% @champions.each do |player| %>
               <tr class="even:bg-gray-50">
                 <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3"><%= player.id %></td>
                 <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3"><%= player.name %></td>
@@ -45,8 +45,8 @@
 <div class="px-4 sm:px-6 lg:px-8">
   <div class="sm:flex sm:items-center">
     <div class="sm:flex-auto">
-      <h1 class="text-base font-semibold leading-6 text-gray-900">Players</h1>
-      <p class="mt-2 text-sm text-gray-700">A list of all the chess players including their name, elo and age.</p>
+      <h1 class="text-base font-semibold leading-6 text-gray-900">Max Elo by Age</h1>
+      <p class="mt-2 text-sm text-gray-700">A list of all the max score by age including their name, elo and age.</p>
     </div>
     <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
       <%= link_to "New player", new_player_path, class: "block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"%>
@@ -68,7 +68,7 @@
             </tr>
           </thead>
           <tbody class="bg-white">
-            <% @players.each do |player| %>
+            <% @max_elo_by_age.each do |player| %>
               <tr class="even:bg-gray-50">
                 <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3"><%= player.id %></td>
                 <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3"><%= player.name %></td>

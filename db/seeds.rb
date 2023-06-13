@@ -9,7 +9,7 @@
 5000.times do 
 	Player.create(
 		name: Faker::Name.name,
-		elo: rand(1...3000),
-		age: rand(13...80)
+		elo: rand(1..3000),
+		age: rand(10..80)
 	)
 end

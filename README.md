@@ -34,6 +34,6 @@ Pour lancer l'app utiliser :
 ./bin/dev 
 ```
 
-Le top 5 des joueurs se trouve sur l'index des joueurs : 
+La liste des champions des joueurs se trouve sur l'index des joueurs avec la liste des elo max par age : 
 
 http://localhost:3000/players 

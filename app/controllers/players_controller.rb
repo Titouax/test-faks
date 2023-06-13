@@ -3,11 +3,8 @@ class PlayersController < ApplicationController
 
   # GET /players or /players.json
   def index
-    @pagy, @players = pagy(Player.all)
-    p_ar            = Player.arel_table
-    @top_5          = Player.order(p_ar[:elo].desc.nulls_last)
-                            .order(p_ar[:age].asc.nulls_last)
-                            .first(5)
+    @pagy, @max_elo_by_age = pagy(Player.get_max_elo_by_age)
+    @champions = Player.get_champions
   end
 
   # GET /players/1 or /players/1.json
